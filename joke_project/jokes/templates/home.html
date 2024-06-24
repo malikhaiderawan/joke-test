@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Joke Home</title>
+</head>
+<body>
+    <h2>Welcome, {{ user.username }}!</h2>
+    <p>{{ joke }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Get New Joke</button>
+    </form>
+    <a href="{% url 'account_logout' %}">Logout</a>
+</body>
+</html>
